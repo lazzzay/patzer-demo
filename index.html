@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antiquariat Patzer · Konstanz · seit 1986</title>
+<meta name="description" content="Antiquariat Jürgen & Bettina Patzer in Konstanz. Seit 1986. 60.000 Titel. Schwerpunkte: Konstanz, Bodensee, Zeppelin, Kinderbücher, Buchwesen. Kreuzlinger Straße 31.">
+<meta name="theme-color" content="#1F1814">
+<meta property="og:title" content="Antiquariat Patzer · Konstanz · seit 1986">
+<meta property="og:description" content="Antiquariat Jürgen & Bettina Patzer. 60.000 Titel. Kreuzlinger Straße 31.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Bibliotheks-warm: Tinte auf cremigem Papier */
+    --paper:       #EFE6D3;
+    --paper-2:     #E5D9BF;
+    --paper-deep:  #D9CBA8;
+    --ink:         #1F1814;     /* tiefe Sepia-Tinte */
+    --ink-2:       #3A2D22;
+    --ink-3:       #5B4636;
+    --gold:        #8A6B2E;     /* gedämpftes Antikgold */
+    --burgundy:    #5C2230;     /* tiefes Antiquariats-Burgund */
+    --moss:        #3F4E36;     /* Moosgrün-Akzent */
+    --rule:        #C8B891;
+    --rule-soft:   #DBC9A0;
+
+    --serif:       'Cormorant Garamond', 'EB Garamond', 'Iowan Old Style', Georgia, serif;
+    --body:        'Crimson Pro', 'Georgia', serif;
+    --mono:        'JetBrains Mono', 'Courier New', monospace;
+
+    --max: 1280px;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:var(--body);
+    background:var(--paper);
+    color:var(--ink);
+    font-size:18px;
+    line-height:1.65;
+    font-weight:400;
+    overflow-x:hidden;
+    /* Subtile Papier-Textur via SVG */
+    background-image:
+      radial-gradient(ellipse at top, rgba(122,75,30,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(31,24,20,0.05) 0%, transparent 50%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.6  0 0 0 0 0.45  0 0 0 0 0.3  0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    background-attachment:fixed;
+  }
+
+  ::selection{ background:var(--ink); color:var(--paper); }
+
+  a{ color:inherit; text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px; transition:all 240ms ease; }
+  a:hover{ color:var(--burgundy); text-decoration-color:var(--burgundy); }
+
+  img{ display:block; max-width:100%; height:auto; }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 var(--gutter); }
+  .wrap-narrow{ max-width:880px; margin:0 auto; padding:0 var(--gutter); }
+  .wrap-text{ max-width:680px; margin:0 auto; padding:0 var(--gutter); }
+
+  /* ─── HEADER ─── */
+  header.top{
+    position:absolute; top:0; left:0; right:0; z-index:50;
+    padding:36px 0;
+  }
+  .top-inner{
+    max-width:var(--max); margin:0 auto;
+    padding:0 var(--gutter);
+    display:flex; justify-content:space-between; align-items:center;
+    gap:32px;
+  }
+  .brand{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:16px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--ink);
+    display:inline-flex;
+    align-items:center;
+    gap:18px;
+    text-decoration:none;
+  }
+  .brand:hover{ color:var(--burgundy); }
+  .brand .amp{
+    font-style:italic;
+    font-weight:400;
+    color:var(--burgundy);
+    margin:0 6px;
+  }
+  .brand-mark{
+    width:44px; height:44px;
+    flex-shrink:0;
+    display:block;
+    transition:transform 320ms ease, opacity 240ms ease;
+  }
+  .brand:hover .brand-mark{
+    transform:rotate(-2deg);
+    opacity:0.82;
+  }
+  .brand-text{
+    display:inline-flex;
+    flex-direction:column;
+    line-height:1.05;
+    gap:3px;
+  }
+  .brand-text .brand-line-1{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.32em;
+    color:var(--ink-3);
+    text-transform:uppercase;
+    font-weight:400;
+  }
+  .brand-text .brand-line-2{
+    font-family:var(--serif);
+    font-size:16px;
+    letter-spacing:0.18em;
+    font-weight:500;
+    color:var(--ink);
+    text-transform:uppercase;
+  }
+  nav.top-nav{
+    display:flex; gap:32px;
+    font-family:var(--serif);
+    font-size:14px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  nav.top-nav a{
+    color:var(--ink-2);
+    text-decoration:none;
+  }
+  nav.top-nav a:hover{ color:var(--burgundy); }
+
+  /* ─── HERO ─── */
+  section.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr 0.9fr;
+    gap:64px;
+    align-items:center;
+    padding:120px 0 64px;
+  }
+
+  /* ─── SUCHE im Hero ─── */
+  .search-block{
+    margin-top:44px;
+    padding:32px;
+    background:rgba(255,253,247,0.65);
+    border:1px solid var(--rule);
+    box-shadow:
+      0 30px 60px -30px rgba(31,24,20,0.25),
+      inset 0 0 0 1px rgba(255,253,247,0.6);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+  }
+  .search-label{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.32em;
+    color:var(--ink-3);
+    text-transform:uppercase;
+    margin-bottom:14px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .search-label::before{
+    content:""; width:24px; height:1px; background:var(--gold);
+  }
+  .search-label b{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--burgundy);
+    text-transform:none;
+  }
+  .search-form-link{
+    display:flex;
+    border-bottom:2px solid var(--ink);
+    align-items:center;
+    margin-bottom:18px;
+    text-decoration:none;
+    padding:14px 0;
+    cursor:pointer;
+    transition:border-color 240ms ease;
+    color:var(--ink);
+    gap:16px;
+  }
+  .search-form-link:hover{
+    border-color:var(--burgundy);
+    color:var(--burgundy);
+  }
+  .search-form-link:hover .search-cta{
+    transform:translateX(3px);
+  }
+  .search-placeholder{
+    flex:1;
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:22px;
+    font-weight:400;
+    color:var(--ink-3);
+    opacity:0.85;
+  }
+  .search-cta{
+    font-family:var(--serif);
+    font-size:18px;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform 200ms ease, color 200ms ease;
+    white-space:nowrap;
+  }
+  .search-form-link:hover .search-cta{ color:var(--burgundy); }
+
+  .search-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:6px;
+  }
+  .search-tags .tag-label{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-right:6px;
+    align-self:center;
+  }
+  .search-tags a{
+    display:inline-block;
+    padding:6px 14px;
+    border:1px solid var(--rule);
+    background:rgba(255,253,247,0.4);
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-2);
+    text-decoration:none;
+    transition:all 240ms ease;
+    border-radius:0;
+  }
+  .search-tags a:hover{
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
+  }
+  .search-foot{
+    margin-top:18px;
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-3);
+    text-align:center;
+  }
+  .search-foot b{
+    font-family:var(--serif);
+    font-style:normal;
+    font-weight:500;
+    color:var(--burgundy);
+    font-size:16px;
+  }
+  .hero-eyebrow{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-bottom:32px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .hero-eyebrow::before{
+    content:""; width:32px; height:1px; background:var(--ink-3);
+  }
+  h1.title{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(48px, 7vw, 96px);
+    line-height:0.98;
+    letter-spacing:-0.015em;
+    color:var(--ink);
+    margin-bottom:36px;
+  }
+  h1.title em{
+    font-style:italic;
+    font-weight:300;
+    color:var(--burgundy);
+  }
+  .hero-lede{
+    font-family:var(--body);
+    font-weight:300;
+    font-size:21px;
+    line-height:1.55;
+    max-width:38ch;
+    color:var(--ink-2);
+    font-style:italic;
+  }
+  .hero-meta{
+    display:flex;
+    gap:48px;
+    margin-top:48px;
+    padding-top:28px;
+    border-top:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.16em;
+    color:var(--ink-3);
+    text-transform:uppercase;
+  }
+  .hero-meta b{
+    font-family:var(--serif);
+    font-size:28px;
+    font-weight:500;
+    color:var(--burgundy);
+    letter-spacing:0;
+    text-transform:none;
+    display:block;
+    line-height:1;
+    margin-bottom:6px;
+  }
+
+  .hero-image{
+    position:relative;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    box-shadow:
+      0 30px 60px -30px rgba(31,24,20,0.4),
+      0 10px 20px -10px rgba(31,24,20,0.3);
+    transform:rotate(-2deg);
+    transition:transform 800ms ease;
+  }
+  .hero-image:hover{ transform:rotate(-1deg); }
+  .hero-image img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:sepia(0.18) saturate(0.92) contrast(1.05);
+  }
+  .hero-image .frame-overlay{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, transparent 60%, rgba(31,24,20,0.25) 100%),
+      radial-gradient(ellipse at center, transparent 50%, rgba(31,24,20,0.18) 100%);
+    pointer-events:none;
+  }
+  .hero-image-caption{
+    position:absolute; bottom:18px; left:18px;
+    color:var(--paper);
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:14px;
+    text-shadow:0 1px 2px rgba(0,0,0,0.6);
+  }
+
+  /* Dekorative Ornamente */
+  .ornament{
+    text-align:center;
+    margin:64px 0;
+    color:var(--rule);
+    font-family:var(--serif);
+    font-size:24px;
+    letter-spacing:0.8em;
+  }
+  .ornament::before{ content:""; display:inline-block; width:48px; height:1px; background:var(--rule); vertical-align:middle; margin-right:24px; }
+  .ornament::after{ content:""; display:inline-block; width:48px; height:1px; background:var(--rule); vertical-align:middle; margin-left:24px; }
+
+  /* ─── STORY / 39 JAHRE ─── */
+  section.story{
+    padding:140px 0;
+    border-top:1px solid var(--rule);
+    background:var(--paper);
+    position:relative;
+  }
+  .story-head{
+    text-align:center;
+    margin-bottom:80px;
+  }
+  .story-label{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-bottom:18px;
+  }
+  h2.story-title{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:clamp(36px, 5vw, 64px);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  h2.story-title em{
+    font-style:italic;
+    color:var(--burgundy);
+  }
+  .story-body{
+    font-family:var(--body);
+    font-weight:400;
+    font-size:20px;
+    line-height:1.78;
+    color:var(--ink-2);
+  }
+  .story-body p{
+    margin-bottom:1.5em;
+  }
+  .story-body p:first-of-type::first-letter{
+    font-family:var(--serif);
+    font-size:72px;
+    font-weight:400;
+    float:left;
+    line-height:0.9;
+    padding:8px 12px 0 0;
+    color:var(--burgundy);
+    font-style:italic;
+  }
+  .story-body em{
+    font-style:italic;
+    color:var(--ink);
+  }
+  .story-body strong{
+    font-weight:500;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .story-quote{
+    margin:64px 0;
+    padding:32px 0;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    text-align:center;
+  }
+  .story-quote p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:300;
+    font-size:28px;
+    line-height:1.4;
+    color:var(--burgundy);
+    max-width:30ch;
+    margin:0 auto;
+  }
+  .story-quote .attr{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-top:18px;
+    font-style:normal;
+  }
+
+  .story-image{
+    margin:80px 0 0;
+    text-align:center;
+  }
+  .story-image img{
+    display:inline-block;
+    max-width:100%;
+    box-shadow:0 20px 40px -20px rgba(31,24,20,0.4);
+    filter:sepia(0.2) saturate(0.95);
+  }
+  .story-image figcaption{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-3);
+    margin-top:18px;
+  }
+
+  /* ─── SCHWERPUNKTE (4 Welten) ─── */
+  section.themes{
+    padding:140px 0;
+    background:var(--paper-2);
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+  }
+  .themes-head{
+    text-align:center;
+    margin-bottom:80px;
+  }
+  .themes-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:80px 56px;
+  }
+  .theme{
+    display:flex;
+    flex-direction:column;
+  }
+  .theme-num{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.32em;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .theme-img{
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:var(--paper-deep);
+    margin-bottom:28px;
+    box-shadow:0 20px 40px -20px rgba(31,24,20,0.3);
+    transition:transform 700ms ease, box-shadow 700ms ease;
+  }
+  .theme:hover .theme-img{
+    transform:translateY(-6px);
+    box-shadow:0 30px 50px -20px rgba(31,24,20,0.4);
+  }
+  .theme-img img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:sepia(0.15) saturate(0.94) contrast(1.04);
+  }
+  .theme h3{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:32px;
+    line-height:1.1;
+    color:var(--ink);
+    margin-bottom:14px;
+  }
+  .theme h3 em{
+    font-style:italic;
+    color:var(--burgundy);
+    font-weight:400;
+  }
+  .theme p{
+    font-size:17px;
+    color:var(--ink-2);
+    line-height:1.7;
+    max-width:42ch;
+  }
+
+  /* ─── SCHAUFENSTER ─── */
+  section.schaufenster{
+    padding:140px 0;
+    background:var(--paper);
+  }
+  .schaufenster-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:48px;
+    margin-top:64px;
+  }
+  .buch{
+    cursor:pointer;
+  }
+  .buch-img{
+    aspect-ratio:3/4;
+    overflow:hidden;
+    background:var(--paper-deep);
+    margin-bottom:18px;
+    box-shadow:0 15px 30px -15px rgba(31,24,20,0.35);
+    transition:transform 600ms cubic-bezier(0.16,1,0.3,1);
+  }
+  .buch:hover .buch-img{ transform:translateY(-4px) rotate(-0.5deg); }
+  .buch-img img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:sepia(0.12) saturate(0.95);
+  }
+  .buch-title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:18px;
+    line-height:1.3;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .buch-title em{ font-style:italic; font-weight:400; color:var(--ink-2); }
+  .buch-meta{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.16em;
+    color:var(--ink-3);
+    text-transform:uppercase;
+  }
+  .buch-price{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--burgundy);
+    font-size:15px;
+    margin-top:8px;
+  }
+
+  /* ─── KURATIERTES LAGER (eigene Datenbank) ─── */
+  section.lager{
+    padding:140px 0;
+    background:var(--paper-2);
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+  }
+  .lager-intro{
+    text-align:center;
+    margin-bottom:48px;
+    max-width:60ch;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .lager-intro p{
+    font-family:var(--body);
+    font-style:italic;
+    font-size:19px;
+    color:var(--ink-2);
+    line-height:1.65;
+    font-weight:300;
+  }
+
+  .lager-shell{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    gap:48px;
+    margin-top:48px;
+  }
+
+  /* Filter-Sidebar */
+  .lager-filter{
+    border-right:1px solid var(--rule);
+    padding-right:32px;
+  }
+  .lager-filter h4{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.32em;
+    color:var(--ink-3);
+    text-transform:uppercase;
+    margin-bottom:14px;
+    margin-top:28px;
+  }
+  .lager-filter h4:first-child{ margin-top:0; }
+  .lager-filter ul{
+    list-style:none;
+    margin-bottom:8px;
+  }
+  .lager-filter li{
+    padding:4px 0;
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--ink-2);
+    cursor:pointer;
+    transition:color 200ms ease;
+    display:flex; justify-content:space-between;
+  }
+  .lager-filter li:hover{ color:var(--burgundy); }
+  .lager-filter li.active{
+    color:var(--burgundy);
+    font-style:italic;
+  }
+  .lager-filter li .count{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--ink-3);
+    font-style:normal;
+  }
+  .lager-filter .range{
+    margin-top:6px;
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-2);
+    padding:6px 0;
+  }
+
+  /* Lager-Liste rechts */
+  .lager-list-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding-bottom:14px; margin-bottom:8px;
+    border-bottom:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+  }
+  .lager-list-head b{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    color:var(--burgundy);
+    font-size:14px;
+    letter-spacing:0.02em;
+    text-transform:none;
+  }
+
+  .lager-row{
+    display:grid;
+    grid-template-columns:80px 1fr auto;
+    gap:24px;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid var(--rule-soft);
+    transition:padding 200ms ease;
+    cursor:pointer;
+  }
+  .lager-row:hover{ padding-left:8px; }
+  .lager-row:hover .lager-title{ color:var(--burgundy); }
+  .lager-row .lager-img{
+    width:80px; height:100px;
+    overflow:hidden;
+    background:var(--paper-deep);
+    box-shadow:0 4px 12px -4px rgba(31,24,20,0.3);
+  }
+  .lager-row .lager-img img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:sepia(0.12);
+  }
+  .lager-meta-top{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-bottom:4px;
+  }
+  .lager-title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:18px;
+    line-height:1.25;
+    color:var(--ink);
+    margin-bottom:4px;
+    transition:color 200ms ease;
+  }
+  .lager-title em{ font-style:italic; font-weight:400; }
+  .lager-author{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-3);
+  }
+  .lager-price-col{
+    text-align:right;
+  }
+  .lager-price{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--burgundy);
+    font-size:18px;
+    font-weight:500;
+  }
+  .lager-state{
+    font-family:var(--mono);
+    font-size:10px;
+    color:var(--ink-3);
+    letter-spacing:0.12em;
+    margin-top:3px;
+    text-transform:uppercase;
+  }
+
+  .lager-note{
+    margin-top:40px;
+    padding:24px;
+    background:rgba(255,253,247,0.6);
+    border:1px dashed var(--rule);
+    font-family:var(--body);
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-3);
+    text-align:center;
+    line-height:1.6;
+  }
+
+  /* ─── KATALOGE ─── */
+  section.kataloge{
+    padding:140px 0;
+    background:var(--ink);
+    color:var(--paper);
+    position:relative;
+  }
+  section.kataloge::before{
+    content:"";
+    position:absolute; inset:0;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.88  0 0 0 0 0.72  0 0 0 0.05 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity:0.4;
+    pointer-events:none;
+  }
+  .kataloge-grid{
+    margin-top:64px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:32px;
+    position:relative;
+  }
+  .katalog{
+    background:rgba(239,230,211,0.04);
+    border:1px solid rgba(239,230,211,0.18);
+    padding:32px 24px;
+    text-decoration:none;
+    transition:all 400ms ease;
+    display:block;
+  }
+  .katalog:hover{
+    background:rgba(239,230,211,0.08);
+    border-color:rgba(239,230,211,0.4);
+    transform:translateY(-4px);
+  }
+  .katalog .nr{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.32em;
+    color:rgba(239,230,211,0.55);
+    margin-bottom:24px;
+  }
+  .katalog h4{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:22px;
+    line-height:1.2;
+    color:var(--paper);
+    margin-bottom:10px;
+  }
+  .katalog h4 em{ font-style:italic; }
+  .katalog .meta{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.18em;
+    color:rgba(239,230,211,0.5);
+    text-transform:uppercase;
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid rgba(239,230,211,0.15);
+  }
+  section.kataloge h2.story-title{ color:var(--paper); }
+  section.kataloge h2.story-title em{ color:#D9A95E; }
+  section.kataloge .story-label{ color:rgba(239,230,211,0.55); }
+
+  /* ─── LADEN / KONTAKT ─── */
+  section.laden{
+    padding:140px 0;
+    background:var(--paper);
+    border-top:1px solid var(--rule);
+  }
+  .laden-grid{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:80px;
+    align-items:center;
+    margin-top:80px;
+  }
+  .laden-img{
+    aspect-ratio:4/3;
+    overflow:hidden;
+    box-shadow:0 30px 60px -30px rgba(31,24,20,0.5);
+  }
+  .laden-img img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:sepia(0.15) saturate(0.95);
+  }
+  .laden-info h3{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:36px;
+    line-height:1.1;
+    color:var(--ink);
+    margin-bottom:24px;
+  }
+  .laden-info h3 em{ font-style:italic; color:var(--burgundy); }
+  .laden-info p{
+    font-size:18px;
+    color:var(--ink-2);
+    line-height:1.7;
+    margin-bottom:16px;
+  }
+  .laden-info .adresse{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink);
+    line-height:1.5;
+    margin:24px 0;
+  }
+  .oeffnungszeiten{
+    margin-top:32px;
+    padding:24px 0;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.08em;
+    color:var(--ink-2);
+    line-height:2;
+  }
+  .oeffnungszeiten b{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:15px;
+    color:var(--burgundy);
+    display:inline-block;
+    width:120px;
+    letter-spacing:0;
+  }
+  .laden-cta{
+    margin-top:32px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .laden-cta a{
+    font-family:var(--serif);
+    font-size:16px;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    text-decoration:none;
+    padding:14px 28px;
+    border:1px solid var(--ink);
+    transition:all 240ms ease;
+  }
+  .laden-cta a:hover{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .laden-cta a.primary{
+    background:var(--burgundy);
+    color:var(--paper);
+    border-color:var(--burgundy);
+  }
+  .laden-cta a.primary:hover{
+    background:var(--ink);
+    border-color:var(--ink);
+  }
+
+  /* ─── FOOTER ─── */
+  footer.bottom{
+    background:var(--ink);
+    color:rgba(239,230,211,0.7);
+    padding:64px 0 40px;
+    border-top:1px solid var(--ink);
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:48px;
+    margin-bottom:48px;
+  }
+  .foot-grid h5{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:rgba(239,230,211,0.55);
+    margin-bottom:18px;
+  }
+  .foot-grid p, .foot-grid li{
+    font-size:14px;
+    line-height:1.8;
+    color:rgba(239,230,211,0.75);
+    list-style:none;
+  }
+  .foot-grid a{
+    color:rgba(239,230,211,0.75);
+    text-decoration:none;
+  }
+  .foot-grid a:hover{ color:#D9A95E; }
+  .foot-brand{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:24px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--paper);
+    margin-bottom:18px;
+  }
+  .foot-brand .amp{ color:#D9A95E; font-style:italic; margin:0 4px; }
+  .foot-brand-mark{
+    display:block;
+    width:68px; height:68px;
+    opacity:0.9;
+    margin-bottom:18px;
+  }
+  .foot-strip{
+    border-top:1px solid rgba(239,230,211,0.15);
+    padding-top:24px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.16em;
+    color:rgba(239,230,211,0.5);
+    text-transform:uppercase;
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width:880px){
+    nav.top-nav{ display:none; }
+    .brand{ gap:12px; }
+    .brand-mark{ width:36px; height:36px; }
+    .brand-text .brand-line-1{ display:none; }
+    .brand-text .brand-line-2{ font-size:14px; letter-spacing:0.16em; }
+    .foot-brand-mark{ width:56px; height:56px; }
+    .hero-grid{ grid-template-columns:1fr; gap:48px; padding:100px 0 48px; }
+    h1.title{ font-size:48px; }
+    .hero-meta{ gap:24px; flex-wrap:wrap; }
+    .hero-image{ max-width:80%; margin:0 auto; transform:rotate(-1deg); }
+    .search-block{ padding:24px 20px; }
+    .search-placeholder{ font-size:16px; }
+    .search-cta{ font-size:14px; }
+    .search-tags{ gap:6px; }
+    .search-tags a{ padding:5px 10px; font-size:13px; }
+    .search-tags .tag-label{ display:block; width:100%; margin-bottom:4px; }
+    section.story, section.themes, section.schaufenster, section.kataloge, section.laden{
+      padding:80px 0;
+    }
+    h2.story-title{ font-size:32px; }
+    .story-body{ font-size:17px; }
+    .themes-grid{ grid-template-columns:1fr; gap:64px; }
+    .schaufenster-grid{ grid-template-columns:1fr 1fr; gap:32px; }
+    .lager-shell{ grid-template-columns:1fr; gap:32px; }
+    .lager-filter{ border-right:0; padding-right:0; border-bottom:1px solid var(--rule); padding-bottom:24px; }
+    .lager-row{ grid-template-columns:60px 1fr auto; gap:16px; }
+    .lager-row .lager-img{ width:60px; height:80px; }
+    .lager-title{ font-size:16px; }
+    .kataloge-grid{ grid-template-columns:1fr 1fr; gap:20px; }
+    .laden-grid{ grid-template-columns:1fr; gap:48px; }
+    .foot-grid{ grid-template-columns:1fr 1fr; gap:32px; }
+    .ornament{ margin:48px 0; font-size:20px; }
+  }
+  @media (max-width:560px){
+    .schaufenster-grid{ grid-template-columns:1fr; }
+    .kataloge-grid{ grid-template-columns:1fr; }
+    .foot-grid{ grid-template-columns:1fr; }
+    .laden-cta{ flex-direction:column; }
+    .laden-cta a{ text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <a href="#" class="brand" aria-label="Antiquariat Patzer · Startseite">
+      <img class="brand-mark" src="assets/logo-patzer.png" alt="Antiquariat Patzer Monogramm" width="44" height="44">
+      <span class="brand-text">
+        <span class="brand-line-1">Antiquariat · seit 1986</span>
+        <span class="brand-line-2">Patzer <span class="amp">&amp;</span> Patzer</span>
+      </span>
+    </a>
+    <nav class="top-nav">
+      <a href="#geschichte">Wir</a>
+      <a href="#welten">Schwerpunkte</a>
+      <a href="#lager">Lager</a>
+      <a href="#kataloge">Kataloge</a>
+      <a href="#laden">Komm vorbei</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-eyebrow">Konstanz · seit 1986</div>
+      <h1 class="title">
+        Antiquariat<br>
+        <em>Jürgen &amp; Bettina<br>Patzer</em>
+      </h1>
+      <p class="hero-lede">
+        Bücher haben uns die Stadt gegeben, in der wir seit fast vier Jahrzehnten leben — und wir geben sie weiter, ein Band nach dem anderen.
+      </p>
+
+      <!-- BESTANDSSUCHE -->
+      <div class="search-block">
+        <div class="search-label">
+          — Suche im Bestand <b>·  60.000 Titel</b>
+        </div>
+        <a class="search-form search-form-link" href="https://www.antiquariat.de/shop.jsp?x=18050923&formtyp=1" target="_blank" rel="noopener" aria-label="Volltextsuche im Bestand auf antiquariat.de">
+          <span class="search-placeholder">Volltextsuche: Titel, Autor, Stichwort, Bestellnummer …</span>
+          <span class="search-cta">
+            Zur Suche
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+        </a>
+        <div class="search-tags">
+          <span class="tag-label">— Unsere Schwerpunkte:</span>
+          <a href="#welten">Konstanz · Bodensee</a>
+          <a href="#welten">Zeppelin</a>
+          <a href="#welten">Kinderbücher</a>
+          <a href="#welten">Buchwesen</a>
+        </div>
+        <div class="search-foot">
+          Unsere Bücher sind über die GIAQ-Plattform <em>antiquariat.de</em> durchsuchbar.<br>
+          <a href="https://www.antiquariat.de/" target="_blank" rel="noopener">Erweiterte Suche &nbsp;→</a> &nbsp;·&nbsp; Bei keinem Treffer: <a href="mailto:buecher@antiquariat-patzer.de?subject=Buchsuche">schreiben Sie uns</a>, wir haben oft noch was im Lager.
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <div><b>39</b>Jahre</div>
+        <div><b>60.000</b>Titel</div>
+        <div><b>4</b>Welten</div>
+      </div>
+    </div>
+    <figure class="hero-image">
+      <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/laden_innen.jpg" alt="Innenraum des Antiquariats Patzer in der Kreuzlinger Straße">
+      <div class="frame-overlay"></div>
+      <div class="hero-image-caption">Unser Laden, Kreuzlinger Straße 31</div>
+    </figure>
+  </div>
+</section>
+
+<!-- ─── STORY ─── -->
+<section class="story" id="geschichte">
+  <div class="wrap-text">
+    <div class="story-head">
+      <div class="story-label">— Wer wir sind —</div>
+      <h2 class="story-title">
+        Eine kurze<br>
+        <em>Geschichte</em> in Büchern.
+      </h2>
+    </div>
+
+    <div class="story-body">
+      <p>
+        Es begann nicht in Konstanz, sondern im Taunus. Im Auktionshaus <em>Reiß &amp; Auvermann</em> lernten wir das Handwerk, das man heute kaum noch lehrt: wie man ein Buch wirklich anschaut. Eine Bindung erfühlt. Eine Auflage erkennt. Eine Ausgabe von einer anderen unterscheidet.
+      </p>
+
+      <p>
+        <strong>Im April 1986</strong> machten wir uns selbständig. Hussenstraße 45, in der Konstanzer Altstadt. Die Regale waren am Anfang fast leer — bestückt mit Büchern aus den eigenen Beständen, von Kollegen geliehen, hier und dort ein Ankauf. Ein Vierteljahr später kamen die ersten Kundinnen wieder. Dann kamen mehr.
+      </p>
+
+      <p>
+        <strong>Seit 2001</strong> ist die Kreuzlinger Straße 31 unsere Adresse. Das, was wir „den neuen Laden" nennen — auch wenn er inzwischen selbst schon ein Vierteljahrhundert mit uns durch die Jahre geht. <em>Seit 1999</em> sind unsere Bestände auch online. Heute sind es <strong>über 60.000 Titel</strong>.
+      </p>
+
+      <p>
+        <strong>Seit 2006</strong> führen wir auch die Tradition des Antiquariats Rudolf Patzer fort und bieten einen größeren Bestand zum Thema Buchwesen und Bibliographie an. Die Schwerpunkte unseres Hauses haben wir nicht ausgesucht. Sie haben sich aus unseren Interessen entwickelt — und das, finden wir, merkt man dem Sortiment an.
+      </p>
+    </div>
+
+    <div class="story-quote">
+      <p>„Wir verkaufen keine alten Bücher.<br>Wir empfehlen sie."</p>
+      <div class="attr">— Patzer &amp; Patzer, seit 1986</div>
+    </div>
+
+    <div class="story-body">
+      <p>
+        Wir sind <strong>Mitglieder im GIAQ</strong>, der Genossenschaft der Internetantiquare, und Sie finden unser Sortiment außer auf dieser Seite auch auf <em>antiquariat.de</em>, ZVAB und AbeBooks. Am liebsten aber lernen wir Sie persönlich kennen — entweder bei uns im Laden, in der Kreuzlinger Straße. Oder am Telefon. Oder per Brief, wenn Ihnen das lieber ist.
+      </p>
+    </div>
+
+    <figure class="story-image">
+      <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/laden_alt.jpg" alt="Der erste Patzer-Laden in der Hussenstraße 45">
+      <figcaption>Der erste Laden in der Hussenstraße 45, 1986</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="ornament">❦</div>
+
+<!-- ─── SCHWERPUNKTE ─── -->
+<section class="themes" id="welten">
+  <div class="wrap">
+    <div class="themes-head">
+      <div class="story-label">— Vier Welten, in denen wir zu Hause sind —</div>
+      <h2 class="story-title">Unsere <em>Schwerpunkte</em>.</h2>
+    </div>
+
+    <div class="themes-grid">
+
+      <article class="theme">
+        <div class="theme-num">— I —</div>
+        <div class="theme-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2025/05/Konstanz_1945-1-1024x646.jpg" alt="Buch zu Konstanz und Bodensee">
+        </div>
+        <h3>Konstanz, Bodensee,<br><em>Landeskunde Baden-Württemberg.</em></h3>
+        <p>
+          Hier sind wir lokal — und tief lokal. Vom barocken Reiseführer bis zur Lithographie des Konstanzer Münsters, vom Bodensee-Panorama bis zur Hegau-Geschichte. Das, was zwischen Stockach und Reichenau geschrieben, gedruckt oder gemalt wurde, ist bei uns am ehesten auffindbar.
+        </p>
+      </article>
+
+      <article class="theme">
+        <div class="theme-num">— II —</div>
+        <div class="theme-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/06/l02_willis_die_lebenswelt_der_tibeter_124898.jpg" alt="Luft- und Raumfahrt-Bücher">
+        </div>
+        <h3>Luft- und Raumfahrt,<br><em>mit dem Zeppelin im Zentrum.</em></h3>
+        <p>
+          Eine Bodensee-Besonderheit, der wir früh treu geblieben sind. Bücher, Programme, Photographien, Manuskripte rund um die Friedrichshafener Geschichte und ihre Verzweigungen — bis zur frühen Raumfahrt.
+        </p>
+      </article>
+
+      <article class="theme">
+        <div class="theme-num">— III —</div>
+        <div class="theme-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2025/09/ABC_für-Kinder-1024x879.jpg" alt="Kinder- und Jugendliteratur">
+        </div>
+        <h3>Kinder- und Jugend­literatur,<br><em>Bilderbücher.</em></h3>
+        <p>
+          Vom illustrierten ABC der Jahrhundertwende bis zum Pixi-Format der Nachkriegsjahre. Hier sammeln wir das, was eine Generation begleitet hat — und finden für Sie das Buch, das Sie als Kind hatten und wieder haben möchten.
+        </p>
+      </article>
+
+      <article class="theme">
+        <div class="theme-num">— IV —</div>
+        <div class="theme-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/142808.jpg" alt="Buchwesen und Bibliographie">
+        </div>
+        <h3>Buchwesen<br><em>und Bibliographie.</em></h3>
+        <p>
+          Bücher über Bücher. Buchgeschichte, Druckkunst, Typographie, Bibliotheken. Eine Sammlung, die wir seit 2006 in der Tradition des Antiquariats Rudolf Patzer weiterführen — eine kleine Bibliothek im Antiquariat.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── SCHAUFENSTER ─── -->
+<section class="schaufenster" id="schaufenster">
+  <div class="wrap">
+    <div class="story-head">
+      <div class="story-label">— Aus unserem aktuellen Schaufenster —</div>
+      <h2 class="story-title">Was eben<br><em>angekommen ist</em>.</h2>
+    </div>
+
+    <div class="schaufenster-grid">
+
+      <article class="buch">
+        <div class="buch-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/151405.jpg" alt="Pennsylvania Railroad Prospekt 1876">
+        </div>
+        <div class="buch-meta">Reisen · Lithographie · 1876</div>
+        <div class="buch-title">Pennsylvania Railroad: <em>Special Information für Agenten</em></div>
+        <div class="buch-price">€ 650,–</div>
+      </article>
+
+      <article class="buch">
+        <div class="buch-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/142808.jpg" alt="Gustav Schwab — Der Bodensee, 1840">
+        </div>
+        <div class="buch-meta">Bodensee · 1840</div>
+        <div class="buch-title">Gustav Schwab — <em>Der Bodensee</em></div>
+        <div class="buch-price">€ 420,–</div>
+      </article>
+
+      <article class="buch">
+        <div class="buch-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/08/historische-plakate-th.-th.-heine-140789.jpg" alt="Th. Th. Heine — Historische Plakate">
+        </div>
+        <div class="buch-meta">Plakatkunst · Heine</div>
+        <div class="buch-title">Th. Th. Heine — <em>Historische Plakate</em></div>
+        <div class="buch-price">auf Anfrage</div>
+      </article>
+
+      <article class="buch">
+        <div class="buch-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2025/07/Starks-Kunst-Krimis-1024x768.jpg" alt="Kunst-Krimis">
+        </div>
+        <div class="buch-meta">Belletristik · Krimi</div>
+        <div class="buch-title">Stark — <em>Kunst-Krimis</em></div>
+        <div class="buch-price">€ 28,–</div>
+      </article>
+
+      <article class="buch">
+        <div class="buch-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/06/l02_andersen_das_feuerzeug_-90838.jpg" alt="Andersen — Das Feuerzeug">
+        </div>
+        <div class="buch-meta">Kinderbuch · Andersen</div>
+        <div class="buch-title">H. C. Andersen — <em>Das Feuerzeug</em></div>
+        <div class="buch-price">€ 65,–</div>
+      </article>
+
+      <article class="buch">
+        <div class="buch-img">
+          <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/1300-Jahre-Klosterinsel-Reichenau-1024x768.jpg" alt="1300 Jahre Klosterinsel Reichenau">
+        </div>
+        <div class="buch-meta">Konstanz · Reichenau</div>
+        <div class="buch-title">1300 Jahre <em>Klosterinsel Reichenau</em></div>
+        <div class="buch-price">€ 145,–</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="ornament">❦</div>
+
+<!-- ─── KURATIERTES LAGER (eigene Datenbank) ─── -->
+<section class="lager" id="lager">
+  <div class="wrap">
+    <div class="story-head">
+      <div class="story-label">— Unser kuratiertes Lager —</div>
+      <h2 class="story-title">Besonderheiten,<br><em>die wir selbst gefunden haben</em>.</h2>
+    </div>
+
+    <div class="lager-intro">
+      <p>
+        Neben unserem Vollbestand auf antiquariat.de pflegen wir hier eine kleine Auswahl von Stücken,
+        die wir für besonders halten — und die Sie nach Thema, Epoche und Preis durchsuchen können.
+      </p>
+    </div>
+
+    <div class="lager-shell">
+
+      <!-- Filter-Sidebar -->
+      <aside class="lager-filter">
+        <h4>Thema</h4>
+        <ul>
+          <li class="active">Alle <span class="count">128</span></li>
+          <li>Konstanz &amp; Bodensee <span class="count">42</span></li>
+          <li>Zeppelin / Luftfahrt <span class="count">18</span></li>
+          <li>Kinderbücher <span class="count">31</span></li>
+          <li>Buchwesen <span class="count">23</span></li>
+          <li>Sonstige <span class="count">14</span></li>
+        </ul>
+
+        <h4>Epoche</h4>
+        <ul>
+          <li>Vor 1800 <span class="count">6</span></li>
+          <li>19. Jahrhundert <span class="count">38</span></li>
+          <li>1900 – 1945 <span class="count">52</span></li>
+          <li>Nach 1945 <span class="count">32</span></li>
+        </ul>
+
+        <h4>Preis</h4>
+        <div class="range">€ 25 — € 1.800</div>
+
+        <h4>Zustand</h4>
+        <ul>
+          <li>Erste Ausgabe <span class="count">21</span></li>
+          <li>Mit Widmung <span class="count">8</span></li>
+          <li>Selten <span class="count">14</span></li>
+        </ul>
+      </aside>
+
+      <!-- Treffer-Liste -->
+      <div class="lager-list">
+        <div class="lager-list-head">
+          <span>Treffer · <b>128 Titel</b></span>
+          <span>Sortierung: <em style="font-style:italic;color:var(--burgundy);">Neueste zuerst</em></span>
+        </div>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/151405.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Reisen · Eisenbahn · 1876 · Erste Ausgabe</div>
+            <div class="lager-title">Special Information für Agenten welche Emigranten befördern <em>nach den Vereinigten Staaten und Canada</em></div>
+            <div class="lager-author">Pennsylvania Railroad · Francis Funk</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 650,–</div>
+            <div class="lager-state">Selten</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/142808.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Konstanz · Bodensee · 1840 · Lithographie</div>
+            <div class="lager-title">Der Bodensee, <em>nebst dem Rheinthale</em></div>
+            <div class="lager-author">Gustav Schwab · Cotta-Verlag, Stuttgart</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 420,–</div>
+            <div class="lager-state">Erste Ausgabe</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2015/08/historische-plakate-th.-th.-heine-140789.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Plakatkunst · Heine · 20. Jh.</div>
+            <div class="lager-title">Historische Plakate <em>der Sezession</em></div>
+            <div class="lager-author">Thomas Theodor Heine</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">auf Anfrage</div>
+            <div class="lager-state">Mit Widmung</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/1300-Jahre-Klosterinsel-Reichenau-1024x768.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Konstanz · Reichenau · 2024</div>
+            <div class="lager-title">1300 Jahre <em>Klosterinsel Reichenau</em></div>
+            <div class="lager-author">Festschrift · Diözese Konstanz</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 145,–</div>
+            <div class="lager-state">Sehr gut</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2015/06/l02_andersen_das_feuerzeug_-90838.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Kinderbuch · Andersen · 1920er</div>
+            <div class="lager-title">Das Feuerzeug</div>
+            <div class="lager-author">Hans Christian Andersen · Verlag Hesse</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 65,–</div>
+            <div class="lager-state">Illustriert</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2025/05/Konstanz_1945-1-1024x646.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Konstanz · Zeitgeschichte · 1945</div>
+            <div class="lager-title">Konstanz <em>1945</em> — Zeitdokumente</div>
+            <div class="lager-author">Stadt Konstanz, Stadtarchiv</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 85,–</div>
+            <div class="lager-state">Erste Ausgabe</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2025/09/ABC_für-Kinder-1024x879.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Kinderbuch · ABC · um 1900</div>
+            <div class="lager-title">ABC für Kinder, <em>illustriert</em></div>
+            <div class="lager-author">Anonyme Lithographie · Süddeutschland</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 220,–</div>
+            <div class="lager-state">Selten</div>
+          </div>
+        </a>
+
+        <a class="lager-row" href="#">
+          <div class="lager-img"><img src="https://antiquariat-patzer.de/wp-content/uploads/2015/06/l02_willis_die_lebenswelt_der_tibeter_124898.jpg" alt=""></div>
+          <div>
+            <div class="lager-meta-top">Ethnographie · 1980er</div>
+            <div class="lager-title">Die Lebenswelt <em>der Tibeter</em></div>
+            <div class="lager-author">Willis · Erstausgabe deutsch</div>
+          </div>
+          <div class="lager-price-col">
+            <div class="lager-price">€ 38,–</div>
+            <div class="lager-state">Gut</div>
+          </div>
+        </a>
+
+        <div class="lager-note">
+          Diese Auswahl ist nur ein Ausschnitt. Unseren Vollbestand mit über 60.000 Titeln finden Sie via
+          <a href="https://www.antiquariat.de/shop.jsp?x=18050923&formtyp=1" target="_blank" rel="noopener">Volltextsuche auf antiquariat.de</a> —
+          dort sind wir solidarisch in der GIAQ-Genossenschaft mit unseren Antiquariats-Kolleg:innen vereint.
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── KATALOGE ─── -->
+<section class="kataloge" id="kataloge">
+  <div class="wrap">
+    <div class="story-head">
+      <div class="story-label">— Unsere gedruckten Kataloge —</div>
+      <h2 class="story-title">Wenn das Schaufenster<br><em>nicht reicht</em>.</h2>
+    </div>
+
+    <div class="kataloge-grid">
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 146</div>
+        <h4>Konstanz, <em>Bodensee, Hegau</em></h4>
+        <div class="meta">Dezember 2020 · 124 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 145</div>
+        <h4>Kinder- und <em>Jugend­literatur</em></h4>
+        <div class="meta">Dezember 2020 · 96 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 144</div>
+        <h4>Luftfahrt &amp; <em>Zeppelin</em></h4>
+        <div class="meta">Dezember 2020 · 108 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 143</div>
+        <h4>Buchwesen &amp; <em>Bibliographie</em></h4>
+        <div class="meta">Dezember 2020 · 84 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 142</div>
+        <h4>Reise- und <em>Landeskunde</em></h4>
+        <div class="meta">Dezember 2018 · 102 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">Sonderliste</div>
+        <h4>Märchen <em>der Welt</em></h4>
+        <div class="meta">Oktober 2016 · 64 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 139</div>
+        <h4>Konstanz <em>im Spiegel</em></h4>
+        <div class="meta">Dezember 2016 · 88 Seiten · PDF</div>
+      </a>
+
+      <a class="katalog" href="#">
+        <div class="nr">No. 136</div>
+        <h4>Photographie &amp; <em>Reproduktion</em></h4>
+        <div class="meta">Dezember 2015 · 76 Seiten · PDF</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── LADEN ─── -->
+<section class="laden" id="laden">
+  <div class="wrap">
+    <div class="story-head">
+      <div class="story-label">— Komm vorbei —</div>
+      <h2 class="story-title">In der <em>Kreuzlinger Straße 31</em>.</h2>
+    </div>
+
+    <div class="laden-grid">
+
+      <figure class="laden-img">
+        <img src="https://antiquariat-patzer.de/wp-content/uploads/2015/02/laden_aussen_s.jpg" alt="Außenansicht Antiquariat Patzer Kreuzlinger Straße 31">
+      </figure>
+
+      <div class="laden-info">
+        <h3>Eine Tür, die <em>aufgeht</em>.</h3>
+        <p>
+          Unser Laden liegt am Rand der Altstadt, ein paar Schritte von der Schweizer Grenze entfernt. Auf rund 80 m² Regalfläche stapeln sich gute 8.000 ausgewählte Bände. Das ist nur ein Bruchteil unseres Bestands — aber es ist der Bruchteil, den wir Ihnen gerade in die Hand geben wollen.
+        </p>
+
+        <p class="adresse">
+          Kreuzlinger Straße 31<br>
+          78462 Konstanz
+        </p>
+
+        <div class="oeffnungszeiten">
+          <div><b>Dienstag</b> 15 – 18 Uhr</div>
+          <div><b>Mittwoch</b> 15 – 18 Uhr</div>
+          <div><b>Donnerstag</b> 15 – 18 Uhr</div>
+          <div><b>Freitag</b> 15 – 18 Uhr</div>
+          <div><b>Samstag</b> 11 – 14 Uhr</div>
+        </div>
+
+        <div class="laden-cta">
+          <a href="tel:+4975312337" class="primary">07531 — 21337</a>
+          <a href="mailto:buecher@antiquariat-patzer.de">Schreiben Sie uns</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="bottom">
+  <div class="wrap">
+
+    <div class="foot-grid">
+      <div>
+        <img class="foot-brand-mark" src="assets/logo-patzer-light.png" alt="Antiquariat Patzer Monogramm" width="68" height="68">
+        <div class="foot-brand">Patzer <span class="amp">&amp;</span> Patzer</div>
+        <p>Antiquariat in Konstanz seit 1986. Geführt von Jürgen Patzer und Bettina Bongartz-Patzer. Mitglied im GIAQ.</p>
+      </div>
+
+      <div>
+        <h5>Wir</h5>
+        <ul>
+          <li><a href="#geschichte">Geschichte</a></li>
+          <li><a href="#welten">Schwerpunkte</a></li>
+          <li><a href="#laden">Ladengeschäft</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Sortiment</h5>
+        <ul>
+          <li><a href="#schaufenster">Schaufenster</a></li>
+          <li><a href="#kataloge">Kataloge</a></li>
+          <li><a href="#">Suche im Bestand</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Auch zu finden auf</h5>
+        <ul>
+          <li><a href="https://www.antiquariat.de/" target="_blank">antiquariat.de</a></li>
+          <li><a href="https://www.zvab.com/" target="_blank">ZVAB</a></li>
+          <li><a href="https://www.abebooks.de/" target="_blank">AbeBooks</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-strip">
+      <div>© 2026 Antiquariat Jürgen &amp; Bettina Patzer · Konstanz</div>
+      <div>
+        <a href="#">Impressum</a> &nbsp;·&nbsp; <a href="#">Datenschutz</a> &nbsp;·&nbsp; <a href="#">AGB</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
